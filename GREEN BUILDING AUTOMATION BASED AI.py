@@ -109,4 +109,8 @@ class GreenBuildingDashboard:
     def stop(self):
         self.running = False
 
-if
+if __name__ == "__main__":
+    root = tk.Tk()
+    dashboard = GreenBuildingDashboard(root)
+    root.protocol("WM_DELETE_WINDOW", dashboard.stop)
+    root.mainloop()
